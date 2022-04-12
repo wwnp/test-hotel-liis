@@ -81,6 +81,10 @@
   align-items: center;
 }
 
+.align-end {
+  align-items: flex-end;
+}
+
 .justify-center {
   justify-content: center;
 }
@@ -1106,17 +1110,11 @@ small {
   background: none !important;
   border: none;
   padding: 0 !important;
-  /*optional*/
   font-family: arial, sans-serif;
-  /*input has OS specific font-family*/
   color: #41522E;
   cursor: pointer;
 }
 
 .pointer {
   cursor: pointer;
-}
-
-input[type="text"] {
-  color: #ccc;
 }

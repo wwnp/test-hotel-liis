@@ -3,7 +3,7 @@ import React from 'react'
 export const ErrorHelper = ({ type }) => {
   return type
     ? (
-      <small id="emailHelp" className="form-text invalid invalid">
+      <small id="emailHelp" className="form-text invalid">
         {type.message}
       </small>
     )

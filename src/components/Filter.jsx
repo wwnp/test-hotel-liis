@@ -14,7 +14,7 @@ export const Filter = () => {
     console.log(data)
   };
   return (
-    <form className=' HomePage__filter Hotel__form text-center' onSubmit={handleSubmit(onSubmit)}>
+    <form className='d-flex flex-column align-end justify-between text-center' onSubmit={handleSubmit(onSubmit)}>
       <div className="input-group">
         <label className='form-label' htmlFor="username">Логин</label>
         <input
