@@ -6,19 +6,20 @@ import { useNavigate } from 'react-router';
 import Cookies from 'js-cookie'
 import { generateToken } from '../auxillary';
 import { useEffect } from 'react';
+import { useHistory } from "react-router-dom";
 
 export const LoginPage = () => {
-  const navigate = useNavigate()
+  const history = useHistory()
   useEffect(() => {
     if (!!Cookies.get('tokenUser')) {
-      navigate('/')
+      history.push('/')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const onSubmit = () => {
     Cookies.set('tokenUser', generateToken(), { expires: 1 })
-    navigate('/')
+    history.push('/')
   };
   const {
     register,

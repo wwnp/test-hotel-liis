@@ -1,8 +1,11 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
 import { ErrorHelper } from './ErrorHelper';
+import { useDispatch, useSelector } from 'react-redux';
+import { SET_REQUEST } from '../redux/contants';
 
 export const Filter = () => {
+  const dispatch = useDispatch()
   const {
     register,
     handleSubmit,
@@ -11,12 +14,13 @@ export const Filter = () => {
     mode: 'onBlur'
   });
   const onSubmit = (data) => {
-    console.log(data)
+    dispatch({ type: SET_REQUEST, payload: data })
   };
+  const { location, date, days } = useSelector(store => store.homepage.request)
   return (
     <form className='d-flex flex-column align-end justify-between text-center' onSubmit={handleSubmit(onSubmit)}>
       <div className="input-group">
-        <label className='form-label' htmlFor="username">Логин</label>
+        <label className='form-label' htmlFor="username">Локация</label>
         <input
           {...register(
             'location', {
@@ -24,7 +28,8 @@ export const Filter = () => {
             minLength: 'Длина локации больше трех символов'
           })}
           className='form-control'
-          type="email"
+          type="text"
+          defaultValue={location}
         />
         <ErrorHelper type={errors?.location}></ErrorHelper>
       </div>
@@ -38,6 +43,8 @@ export const Filter = () => {
           className='form-control'
           type="date"
           id="date"
+          defaultValue={date}
+          min={new Date().toISOString().split("T")[0]}
         />
         <ErrorHelper type={errors?.date}></ErrorHelper>
       </div>
@@ -51,6 +58,9 @@ export const Filter = () => {
           })}
           className='form-control'
           type="number"
+          defaultValue={days}
+          min={1}
+          max={7}
         />
         <ErrorHelper type={errors?.days}></ErrorHelper>
       </div>

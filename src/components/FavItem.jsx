@@ -3,20 +3,41 @@ import { Heart } from './Heart';
 import { Star } from './Star';
 
 export const FavItem = () => {
+  const s = [1, 2, 3, 4, 5]
   return (
-    <div>
-      <div className='d-flex justify-between align-center'>
-        <p style={{ fontSize: '17px' }}>Moscow Marriott Grand Hotel</p>
-        <Heart size='24px'></Heart>
+    <div className='d-flex justify-between align-center'>
+      <div className='d-flex align-center'>
+        <div>
+          <p style={{ fontSize: '17px' }}>hotelName</p>
+          <p>28 June 2020 -- 1 день</p>
+          {
+            s.map(color => {
+              return <Star color={color}></Star>
+            })
+          }
+        </div>
       </div>
-      <p>28 June 2020 -- 1 день</p>
-      <p>
-        <Star></Star>
-        <Star></Star>
-        <Star></Star>
-        <Star color='grey'></Star>
-        <Star color='grey' ></Star>
-      </p>
+      <div className='d-flex flex-column align-end align-center'>
+        <Heart size='24px'></Heart>
+        <p className='text-muted'>price: <span className='HomePage__price ml-2'>priceAvgp</span></p>
+      </div>
     </div>
+    // <div>
+    //   <div className='d-flex justify-between align-center'>
+    //     <p style={{ fontSize: '17px' }}>Moscow Marriott Grand Hotel</p>
+    //     <Heart size='24px'></Heart>
+    //   </div>
+    //   <p>28 June 2020 -- 1 день</p>
+    //   <div className='d-flex justify-between'>
+    //     <p>
+    //       <Star></Star>
+    //       <Star></Star>
+    //       <Star></Star>
+    //       <Star color='grey'></Star>
+    //       <Star color='grey' ></Star>
+    //     </p>
+    //     <p className='text-muted'>price: <span className='HomePage__price ml-2'>23 924p</span></p>
+    //   </div>
+    // </div>
   )
 }

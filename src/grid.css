@@ -1118,3 +1118,7 @@ small {
 .pointer {
   cursor: pointer;
 }
+
+.text-muted {
+  color: #ccc;
+}

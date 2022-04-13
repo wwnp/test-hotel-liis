@@ -123,6 +123,11 @@ code {
   font-weight: 600;
 }
 
+.HomePage__price {
+  font-size: 1.15rem;
+  color: #000;
+}
+
 /* .item {
   height: 200px;
   padding: 2px;
