@@ -1,18 +1,13 @@
 import { END_LOADING, SET_HOTELS, SET_REQUEST, START_LOADING } from "../contants";
-// import { SET_LOCATION, SET_DAYS } from './../contants';
 
 const initialState = {
   hotels: [],
   loading: true,
   favs: 4,
-  // location: 'Moscow',
-  // date: '2022-04-14',
-  // days: 1,
   request: {
-    location: 'Moscow',
+    location: 'Санкт-Петербург',
     date: (new Date()).toISOString().split('T')[0],
     days: 3,
-
   }
 };
 
@@ -38,21 +33,6 @@ const homepage = (state = initialState, { type, payload }) => {
         ...state,
         request: payload,
       };
-    // case SET_LOCATION:
-    //   return {
-    //     ...state,
-    //     location: payload,
-    //   };
-    // case SET_DATE:
-    //   return {
-    //     ...state,
-    //     date: payload,
-    //   };
-    // case SET_DAYS:
-    //   return {
-    //     ...state,
-    //     days: payload,
-    //   };
     default: return state;
   }
 };

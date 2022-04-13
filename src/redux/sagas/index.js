@@ -31,9 +31,6 @@ function* fetchHots() {
   const stringCurrDate = neededDate.toISOString().split('T')[0]
   const stringCheckOut = checkOut.toISOString().split('T')[0]
 
-  // console.log('stringCurrDate', stringCurrDate)
-  // console.log('stringCheckOut', stringCheckOut)
-
   const results = yield call(getHotels.bind(null, location, stringCurrDate, stringCheckOut))
   yield put({ type: SET_HOTELS, payload: results })
   yield put({ type: END_LOADING })
