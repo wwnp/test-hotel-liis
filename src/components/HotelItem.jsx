@@ -14,7 +14,6 @@ export const HotelItem = ({ hotel }) => {
     priceAvg,
   } = hotel
 
-  console.log(priceAvg)
   const s = []
   for (let i = 0; i < stars; i++) {
     s.push('gold')
@@ -43,35 +42,6 @@ export const HotelItem = ({ hotel }) => {
         <p className='text-muted'>price: <span className='HomePage__price ml-2'>{parseInt(priceAvg)}p</span></p>
       </div>
     </div>
-    // <div style={{ borderBottom: '1px solid #e7e7e7' }}>
-    //   <div>
-    //     <div className='d-flex justify-between align-center'>
-    //       <div className='d-flex'>
-    //         <FaHome size={'36px'}></FaHome>
-    //         <p style={{ fontSize: '17px' }}>{hotelName}</p>
-    //       </div>
-
-    //       <Heart size='24px'></Heart>
-    //     </div>
-    //     <p>28 June 2020 -- 1 день</p>
-    //     <div className='d-flex justify-between'>
-    //       <p>
-    // {
-    //   s.map(color => {
-    //     return <Star color={color}></Star>
-    //   })
-    // }
-    //         {/* <Star></Star>
-    //       <Star></Star>
-    //       <Star></Star>
-    //       <Star color='grey'></Star>
-    //       <Star color='grey' ></Star> */}
-    //       </p>
-    //       <p className='text-muted'>price: <span className='HomePage__price ml-2'>{priceAvg}p</span></p>
-    //     </div>
-    //   </div>
-
-    // </div >
   )
 }
 function checkDays(days) {
