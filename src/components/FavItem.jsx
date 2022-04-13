@@ -22,22 +22,5 @@ export const FavItem = () => {
         <p className='text-muted'>price: <span className='HomePage__price ml-2'>priceAvgp</span></p>
       </div>
     </div>
-    // <div>
-    //   <div className='d-flex justify-between align-center'>
-    //     <p style={{ fontSize: '17px' }}>Moscow Marriott Grand Hotel</p>
-    //     <Heart size='24px'></Heart>
-    //   </div>
-    //   <p>28 June 2020 -- 1 день</p>
-    //   <div className='d-flex justify-between'>
-    //     <p>
-    //       <Star></Star>
-    //       <Star></Star>
-    //       <Star></Star>
-    //       <Star color='grey'></Star>
-    //       <Star color='grey' ></Star>
-    //     </p>
-    //     <p className='text-muted'>price: <span className='HomePage__price ml-2'>23 924p</span></p>
-    //   </div>
-    // </div>
   )
 }

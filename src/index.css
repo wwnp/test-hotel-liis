@@ -42,11 +42,9 @@ code {
 .Hotel__form {
   position: relative;
   z-index: 1;
-  /* width: 409px; */
   border-radius: 10px;
   background-color: #fff;
   padding: 32px;
-  /* h100% */
 }
 
 .Header {
@@ -65,7 +63,6 @@ code {
 
 
 .HomePage__grid {
-
   display: grid;
   grid-template-areas:
     'filter main'
@@ -74,10 +71,8 @@ code {
   grid-gap: 24px;
   grid-template-columns: minmax(360px, 360px) 664px;
   grid-template-rows: 410px 472px;
-  /* grid-template-rows: 2fr 1fr; */
   max-width: 1200px;
   margin: 0 auto;
-  /* margin-top: 24px; */
   overflow: hidden;
 }
 
@@ -111,7 +106,6 @@ code {
 .HomePage__block {
   position: relative;
   z-index: 1;
-  /* width: 409px; */
   border-radius: 10px;
   background-color: #fff;
   padding: 1.35rem;

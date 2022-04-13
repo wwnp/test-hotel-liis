@@ -9,9 +9,6 @@ export const Header = () => {
   const singOut = () => {
     Cookies.remove('tokenUser')
     history.push('/login')
-    // if (!!Cookies.get('tokenUser')) {
-    //   history.push('/')
-    // }
   }
   return (
     <div className='Header'>

@@ -2,7 +2,6 @@ import React from 'react'
 import { useForm } from 'react-hook-form';
 import { ErrorHelper } from '../components/ErrorHelper';
 import { emailPattern, passwordPattern } from '../config';
-import { useNavigate } from 'react-router';
 import Cookies from 'js-cookie'
 import { generateToken } from '../auxillary';
 import { useEffect } from 'react';
