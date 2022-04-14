@@ -4,7 +4,6 @@ import { AiTwotoneHeart } from 'react-icons/ai';
 
 export const Heart = ({ size = '16px', isFav, onClick }) => {
   const color = isFav === true ? 'red' : 'grey'
-  console.log(color)
   return (
     <IconContext.Provider
       value={{ color, size }}
