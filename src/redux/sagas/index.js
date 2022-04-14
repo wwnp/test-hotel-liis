@@ -42,7 +42,7 @@ function* fetchHots() {
 
 export function* watchNewsSaga() {
   const path = yield select(({ router }) => router.location.pathname);
-  if (path === '/') {
+  if (path === '/test-hotel-liis/') {
     yield call(fetchHotels);
   }
 }
