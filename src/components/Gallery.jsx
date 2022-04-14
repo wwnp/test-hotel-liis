@@ -18,7 +18,7 @@ const imgs = [
 const handleDragStart = (e) => e.preventDefault();
 
 const items2 = imgs.map((value, index) => {
-  const style = { width: 150 };
+  const style = { width: '100px' };
   return (<img src={value} style={style} onDragStart={handleDragStart} alt={index}></img>);
 });
 

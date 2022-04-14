@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { options } from '../config';
 import { Gallery } from './Gallery';
 import { HotelItem } from './HotelItem';
+import Loader from './Loader';
 
 export const Main = () => {
   const loading = useSelector(store => store.homepage.loading)
@@ -22,15 +23,21 @@ export const Main = () => {
         <h3 style={{ fontSize: '24px', fontWeight: 400, color: '#41522E' }}>{new Date(date).toLocaleDateString('ru-RU', options)}</h3>
       </div>
       <Gallery></Gallery>
-      <h3>Добавлено в избранное: {favs} отеля</h3>
+      {
+        favs.length === 0
+          ? <h3>Ничего не добавлено в избранное</h3>
+          : <h3>Добавлено в избранное: {favs.length} отеля</h3>
+      }
+
       <div>
         {
           loading
-            ? <h1>Loading</h1>
+            ? <Loader></Loader>
             : (
               hotels.map(hotel => {
                 return (
                   <HotelItem
+                    key={hotel.hotelId}
                     hotel={hotel}
                   >
                   </HotelItem>

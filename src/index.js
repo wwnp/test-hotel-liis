@@ -2,6 +2,7 @@ import { HomePage } from "./containers/HomePage";
 import { LoginPage } from "./containers/LoginPage";
 import './index.css'
 import './grid.css'
+import './style.loader.css'
 import { PrivateRoute } from "./routes/PrivateRoute";
 import ReactDOM from 'react-dom';
 import "react-alice-carousel/lib/alice-carousel.css";

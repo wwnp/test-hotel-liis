@@ -11,8 +11,8 @@ export const FavItem = () => {
           <p style={{ fontSize: '17px' }}>hotelName</p>
           <p>28 June 2020 -- 1 день</p>
           {
-            s.map(color => {
-              return <Star color={color}></Star>
+            s.map((color, index) => {
+              return <Star key={color + index + new Date().toLocaleString()} color={color}></Star>
             })
           }
         </div>

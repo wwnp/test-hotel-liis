@@ -2,12 +2,16 @@ import React from 'react'
 import { IconContext } from 'react-icons'
 import { AiTwotoneHeart } from 'react-icons/ai';
 
-export const Heart = ({ color = 'red', size = '16px' }) => {
+export const Heart = ({ size = '16px', isFav, onClick }) => {
+  const color = isFav === true ? 'red' : 'grey'
+  console.log(color)
   return (
     <IconContext.Provider
       value={{ color, size }}
     >
-      <span>
+      <span
+        onClick={onClick}
+      >
         <AiTwotoneHeart className={'pointer'} />
       </span>
     </IconContext.Provider>
