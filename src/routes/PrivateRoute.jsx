@@ -9,7 +9,7 @@ export const PrivateRoute = ({ children }) => {
       ? children
       : <Redirect
         to={{
-          pathname: "/login",
+          pathname: "/test-hotel-liis/login",
         }}
       ></Redirect>
   )

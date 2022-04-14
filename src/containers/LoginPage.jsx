@@ -11,14 +11,14 @@ export const LoginPage = () => {
   const history = useHistory()
   useEffect(() => {
     if (!!Cookies.get('tokenUser')) {
-      history.push('/')
+      history.push('/test-hotel-liis/')
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const onSubmit = () => {
     Cookies.set('tokenUser', generateToken(), { expires: 1 })
-    history.push('/')
+    history.push('/test-hotel-liis/')
   };
   const {
     register,
