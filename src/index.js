@@ -16,10 +16,10 @@ ReactDOM.render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
       <Switch>
-        <Route path='/login' exact>
+        <Route path='/test-hotel-liis/login' exact>
           <LoginPage />
         </Route>
-        <Route path='/' exact>
+        <Route path='/test-hotel-liis/' exact>
           <PrivateRoute >
             <HomePage />
           </PrivateRoute>
