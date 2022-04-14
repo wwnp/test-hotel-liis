@@ -40,7 +40,6 @@ export const HotelItem = ({ hotel }) => {
     <div className='d-flex justify-between align-center' style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px ' }}>
       <div className='d-flex align-center'>
         <div style={{ padding: '24px' }}>
-          {/* <FaHome size={'36px'} ></FaHome> */}
           <HomeIcon></HomeIcon>
         </div>
         <div>
@@ -58,7 +57,6 @@ export const HotelItem = ({ hotel }) => {
         </div>
       </div>
       <div className='d-flex flex-column align-end align-center'>
-        <span >1223</span>
         <Heart
           size='24px'
           isFav={isFav}

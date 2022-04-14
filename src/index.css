@@ -61,7 +61,6 @@ code {
   padding: 0 15px;
 }
 
-
 .HomePage__grid {
   display: grid;
   grid-template-areas:
@@ -76,7 +75,6 @@ code {
   overflow: hidden;
 }
 
-
 @media (max-width: 1200px) {
   .HomePage__grid {
     grid-template-areas:
@@ -88,8 +86,6 @@ code {
     grid-template-rows: min-content;
   }
 }
-
-
 
 .HomePage__filter {
   grid-area: filter;
@@ -119,6 +115,11 @@ code {
 }
 
 .HomePage__price {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   color: #000;
+  font-weight: bold;
+}
+
+.HomePage__FavName {
+  font-size: .8rem;
 }

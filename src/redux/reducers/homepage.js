@@ -1,14 +1,18 @@
-import { END_LOADING, SET_FAV, SET_HOTELS, SET_REQUEST, START_LOADING } from "../contants";
+import { RATE } from "../../config";
+import { END_LOADING, SET_FAV, SET_HOTELS, SET_MODE_RATE, SET_REQUEST, START_LOADING } from "../contants";
+import { PRICE } from './../../config';
+import { SET_MODE_PRICE } from './../contants';
 
 const initialState = {
   hotels: [],
   loading: true,
   favs: [],
   request: {
-    location: 'Санкт-Петербург',
+    location: 'Москва',
     date: (new Date()).toISOString().split('T')[0],
     days: 1,
   },
+  favMode: PRICE
 };
 
 const homepage = (state = initialState, { type, payload }) => {
@@ -45,6 +49,10 @@ const homepage = (state = initialState, { type, payload }) => {
         const filteredFavs = state.favs.filter(hotel => hotel.hotelId !== payload.hotelId)
         return { ...state, favs: filteredFavs }
       }
+    case SET_MODE_RATE:
+      return { ...state, favMode: RATE }
+    case SET_MODE_PRICE:
+      return { ...state, favMode: PRICE }
     default: return state;
   }
 };

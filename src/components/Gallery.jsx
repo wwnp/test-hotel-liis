@@ -18,7 +18,7 @@ const imgs = [
 const handleDragStart = (e) => e.preventDefault();
 
 const items2 = imgs.map((value, index) => {
-  const style = { width: '100px' };
+  const style = { width: '150px' };
   return (<img src={value} style={style} onDragStart={handleDragStart} alt={index}></img>);
 });
 
@@ -27,8 +27,6 @@ export const Gallery = () => {
     <AliceCarousel
       autoWidth={true}
       mouseTracking
-      // responsive={responsive}
-      // innerWidth={150}
       items={items2}
       controlsStrategy="alternate"
       disableButtonsControls={true}

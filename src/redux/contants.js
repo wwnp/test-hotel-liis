@@ -5,3 +5,5 @@ export const END_LOADING = "END_LOADING";
 export const SET_REQUEST = "SET_REQUEST";
 export const SET_FAV = "SET_FAV";
 export const CLICK_FAV_ADD = "CLICK_FAV_ADD";
+export const SET_MODE_RATE = "SET_MODE_RATE";
+export const SET_MODE_PRICE = "SET_MODE_PRICE";

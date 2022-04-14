@@ -31,18 +31,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// ReactDOM.render(
-//   <BrowserRouter basename="test-hotel-liis">
-//     <Routes>
-//       <Route path='/login' element={<LoginPage />} />
-//       <Route path='/' element={
-//         <PrivateRoute >
-//           <HomePage />
-//         </PrivateRoute>
-//       }></Route>
-//     </Routes>
-//   </BrowserRouter>,
-//   document.getElementById('root')
-// );
-
 
