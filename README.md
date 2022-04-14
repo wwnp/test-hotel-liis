@@ -1,2 +1,2 @@
 ## React Hotel Task LIIS
-### Demo: 
+### Demo: https://wwnp.github.io/test-hotel-liis/

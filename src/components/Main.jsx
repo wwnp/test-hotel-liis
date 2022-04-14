@@ -23,11 +23,8 @@ export const Main = () => {
         <h3 style={{ fontSize: '24px', fontWeight: 400, color: '#41522E' }}>{new Date(date).toLocaleDateString('ru-RU', options)}</h3>
       </div>
       <Gallery></Gallery>
-      {
-        favs.length === 0
-          ? <h3>Ничего не добавлено в избранное</h3>
-          : <h3>Добавлено в избранное: {favs.length} отеля</h3>
-      }
+      <h3>Добавлено в избранное: {favs.length} ед.</h3>
+
       <div>
         {
           loading
