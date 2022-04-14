@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/test-hotel-liis/static/css/main.a4ce8486.chunk.css",
-    "main.js": "/test-hotel-liis/static/js/main.8b384a85.chunk.js",
-    "main.js.map": "/test-hotel-liis/static/js/main.8b384a85.chunk.js.map",
+    "main.css": "/test-hotel-liis/static/css/main.393789aa.chunk.css",
+    "main.js": "/test-hotel-liis/static/js/main.de6a56fa.chunk.js",
+    "main.js.map": "/test-hotel-liis/static/js/main.de6a56fa.chunk.js.map",
     "runtime-main.js": "/test-hotel-liis/static/js/runtime-main.d303eec1.js",
     "runtime-main.js.map": "/test-hotel-liis/static/js/runtime-main.d303eec1.js.map",
     "static/css/2.af3ab7ac.chunk.css": "/test-hotel-liis/static/css/2.af3ab7ac.chunk.css",
@@ -10,7 +10,7 @@
     "static/js/2.02be5f1a.chunk.js.map": "/test-hotel-liis/static/js/2.02be5f1a.chunk.js.map",
     "index.html": "/test-hotel-liis/index.html",
     "static/css/2.af3ab7ac.chunk.css.map": "/test-hotel-liis/static/css/2.af3ab7ac.chunk.css.map",
-    "static/css/main.a4ce8486.chunk.css.map": "/test-hotel-liis/static/css/main.a4ce8486.chunk.css.map",
+    "static/css/main.393789aa.chunk.css.map": "/test-hotel-liis/static/css/main.393789aa.chunk.css.map",
     "static/js/2.02be5f1a.chunk.js.LICENSE.txt": "/test-hotel-liis/static/js/2.02be5f1a.chunk.js.LICENSE.txt",
     "static/media/index.css": "/test-hotel-liis/static/media/bg.6bd8f5ea.png",
     "static/media/car1.b9017736.png": "/test-hotel-liis/static/media/car1.b9017736.png",
@@ -21,7 +21,7 @@
     "static/js/runtime-main.d303eec1.js",
     "static/css/2.af3ab7ac.chunk.css",
     "static/js/2.02be5f1a.chunk.js",
-    "static/css/main.a4ce8486.chunk.css",
-    "static/js/main.8b384a85.chunk.js"
+    "static/css/main.393789aa.chunk.css",
+    "static/js/main.de6a56fa.chunk.js"
   ]
 }
