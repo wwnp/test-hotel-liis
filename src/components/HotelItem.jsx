@@ -43,7 +43,7 @@ export const HotelItem = ({ hotel }) => {
           <HomeIcon></HomeIcon>
         </div>
         <div>
-          <p style={{ fontSize: '17px' }}>{hotelName}</p>
+          <p style={{ fontSize: '15px' }}>{hotelName}</p>
           <p>{new Date(date).toLocaleDateString('ru-RU', options)} -- {days} {checkDays(days)}</p>
           {
             s.map((color, index) => {

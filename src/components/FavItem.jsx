@@ -49,7 +49,7 @@ export const FavItem = ({ hotel }) => {
           isFav={true}
           onClick={() => dispatch({ type: SET_FAV, payload: hotel })}>
         </Heart>
-        <p className='text-muted'>price: <span className='HomePage__price ml-2'>{parseInt(priceAvg)}p</span></p>
+        <p className='text-muted'>price: <span className='HomePage__price ml-1'>{parseInt(priceAvg)}p</span></p>
       </div>
     </div>
   )
