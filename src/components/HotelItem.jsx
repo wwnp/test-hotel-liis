@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { options } from './../config';
 import { HomeIcon } from './HomeIcon';
 import { SET_FAV } from '../redux/contants';
+import { checkDays } from '../auxillary';
 
 export const HotelItem = ({ hotel }) => {
   const dispatch = useDispatch()
@@ -67,13 +68,4 @@ export const HotelItem = ({ hotel }) => {
       </div>
     </div>
   )
-}
-function checkDays(days) {
-  if (days >= 5) {
-    return 'дней'
-  }
-  if (days >= 2) {
-    return 'дня'
-  }
-  return 'день'
 }

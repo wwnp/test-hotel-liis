@@ -7,7 +7,7 @@ const initialState = {
   request: {
     location: 'Санкт-Петербург',
     date: (new Date()).toISOString().split('T')[0],
-    days: 3,
+    days: 1,
   },
 };
 
@@ -43,7 +43,6 @@ const homepage = (state = initialState, { type, payload }) => {
         return { ...state, favs: [...state.favs, newItem] }
       } else {
         const filteredFavs = state.favs.filter(hotel => hotel.hotelId !== payload.hotelId)
-        // console.log(filtered)
         return { ...state, favs: filteredFavs }
       }
     default: return state;

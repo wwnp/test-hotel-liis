@@ -6,14 +6,26 @@ import { END_LOADING, SET_HOTELS, SET_REQUEST, SET_FAV, CLICK_FAV_ADD } from '..
 import { START_LOADING } from './../contants';
 
 export function* fetchHotels() {
-  const currDate = new Date()
-  const checkOut = new Date()
-  checkOut.setDate(currDate.getDate() + 7);
+  const homepage = yield select(({ homepage }) => homepage);
+  const { request } = homepage
+  const { location, date, days } = request
 
-  const stringCurrDate = currDate.toISOString().split('T')[0]
+  const neededDate = new Date(date)
+  const checkOut = new Date()
+  checkOut.setDate(neededDate.getDate() + parseInt(days));
+  // const currDate = new Date()
+  // const checkOut = new Date()
+  // checkOut.setDate(currDate.getDate() + 7);
+
+  // const stringCurrDate = currDate.toISOString().split('T')[0]
+  // const stringCheckOut = checkOut.toISOString().split('T')[0]
+
+  const stringCurrDate = neededDate.toISOString().split('T')[0]
   const stringCheckOut = checkOut.toISOString().split('T')[0]
 
-  const results = yield call(getHotels.bind(null, 'Санкт-Петербург', stringCurrDate, stringCheckOut))
+  const results = yield call(getHotels.bind(null, location, stringCurrDate, stringCheckOut))
+
+  // const results = yield call(getHotels.bind(null, location, stringCurrDate, stringCheckOut))
   yield put({ type: SET_HOTELS, payload: results })
   yield put({ type: END_LOADING })
 }

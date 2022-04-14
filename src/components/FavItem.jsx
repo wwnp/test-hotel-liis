@@ -1,26 +1,79 @@
 import React from 'react'
 import { Heart } from './Heart';
 import { Star } from './Star';
+import { useDispatch, useSelector } from 'react-redux';
+import { options } from '../config';
+import { checkDays } from '../auxillary';
+import { SET_FAV } from '../redux/contants';
 
-export const FavItem = () => {
-  const s = [1, 2, 3, 4, 5]
+export const FavItem = ({ hotel }) => {
+  console.log(hotel)
+  const dispatch = useDispatch()
+
+  const { date, days } = useSelector(store => store.homepage.request)
+  // const s = [1, 2, 3, 4, 5]
+  const {
+    hotelName,
+    stars,
+    priceAvg,
+    hotelId
+  } = hotel
+
+  const s = []
+  for (let i = 0; i < stars; i++) {
+    s.push('gold')
+  }
+  const dif = 5 - s.length
+  for (let i = 0; i < dif; i++) {
+    s.push('grey')
+  }
+
+
   return (
-    <div className='d-flex justify-between align-center'>
+    <div className='d-flex justify-between align-center' style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px ' }}>
       <div className='d-flex align-center'>
         <div>
-          <p style={{ fontSize: '17px' }}>hotelName</p>
-          <p>28 June 2020 -- 1 день</p>
+          <p style={{ fontSize: '17px' }}>{hotelName}</p>
+          <p>{new Date(date).toLocaleDateString('ru-RU', options)} -- {days} {checkDays(days)}</p>
           {
             s.map((color, index) => {
-              return <Star key={color + index + new Date().toLocaleString()} color={color}></Star>
+              return <Star
+                key={color + index + new Date().toLocaleString()}
+                color={color}
+              >
+              </Star>
             })
           }
         </div>
       </div>
       <div className='d-flex flex-column align-end align-center'>
-        <Heart size='24px'></Heart>
-        <p className='text-muted'>price: <span className='HomePage__price ml-2'>priceAvgp</span></p>
+        <span >1223</span>
+        <Heart
+          size='24px'
+          isFav={true}
+          onClick={() => dispatch({ type: SET_FAV, payload: hotel })}>
+        </Heart>
+        <p className='text-muted'>price: <span className='HomePage__price ml-2'>{parseInt(priceAvg)}p</span></p>
       </div>
     </div>
+
+
+    // <div className='d-flex justify-between align-center'>
+    //   <div className='d-flex align-center'>
+    //     <div>
+    //       <p style={{ fontSize: '17px' }}>hotelName</p>
+    //       <p>28 June 2020 -- 1 день</p>
+    //       {
+    //         s.map((color, index) => {
+    //           return <Star key={color + index + new Date().toLocaleString()} color={color}></Star>
+    //         })
+    //       }
+    //     </div>
+    //   </div>
+    //   <div className='d-flex flex-column align-end align-center'>
+    //     <Heart size='24px'></Heart>
+    //     <p className='text-muted'>price: <span className='HomePage__price ml-2'>priceAvgp</span></p>
+    //   </div>
+    // </div>
   )
 }
