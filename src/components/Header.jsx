@@ -8,7 +8,7 @@ export const Header = () => {
   const history = useHistory()
   const singOut = () => {
     Cookies.remove('tokenUser')
-    history.push('/login')
+    history.push('/test-hotel-liis/login')
   }
   return (
     <div className='Header'>
