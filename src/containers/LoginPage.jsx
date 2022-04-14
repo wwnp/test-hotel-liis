@@ -42,6 +42,7 @@ export const LoginPage = () => {
                 message: 'Email pattern be like: example@test.com'
               }
             })}
+            defaultValue='example@test.com'
             className='form-control'
             type="email"
           />
@@ -58,6 +59,7 @@ export const LoginPage = () => {
                 message: 'Минимум 8 символов'
               }
             })}
+            defaultValue='12345678'
             className='form-control'
             type="password"
             id="password"
